@@ -2,14 +2,12 @@
 
 ## Introduction
 
-This project implements a system to process image data from CSV files asynchronously. It provides APIs to upload CSV files, track processing status, and retrieve processed image data.
+This project implements a system for processing image data from CSV files asynchronously. It provides APIs to upload CSV files, monitor processing status, and retrieve the processed image results.
 
 ## Features
 
 - **Upload API:** Accepts CSV files and generates a unique request ID.
 - **Status API:** Allows checking the processing status using the request ID.
-- **Asynchronous Workers:** Processes images by resizing and stores them in a database.
-- **Webhook Integration:** Sends notifications upon processing completion.
 
 ## API Endpoints
 
@@ -26,11 +24,6 @@ This project implements a system to process image data from CSV files asynchrono
 - **Method:** GET
 - **Request Params:** `requestId` (String)
 - **Response:** JSON with `status` of the processing request (`PENDING`, `PROCESSING`, `COMPLETED`).
-
-## Asynchronous Workers
-
-### Image Processing Worker
-
 - **Functionality:** Downloads images from URLs, resizes them, and updates database records with processed image URLs.
 
 ## Installation and Setup
@@ -48,5 +41,6 @@ This project implements a system to process image data from CSV files asynchrono
 - Axios
 - Sharp (Image Processing)
 - MySQL (Database)
+- Render.com (Deployment)
 
-
+Deploy link: https://image-processing-csv-files.onrender.com
